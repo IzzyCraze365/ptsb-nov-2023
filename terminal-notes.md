@@ -37,6 +37,7 @@ git config --global user.email "johnaisabella3@gmail.com"
 - **git commit -m "some message":** Commits/saves the files that have been added with a message describing what has been changed
 - **git branch** - show us current branch that we are working within
 - **git branch -M main** : changes our default branch name
+- **git log --oneline** : This will show the different values of of commits so you can revert your code.
 
 ## NODE
 - node --version
