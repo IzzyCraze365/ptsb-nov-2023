@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="https://assets-global.website-files.com/64921323294d7b037da1a52c/649c57b41f1d5e313e0ee3b6_Favicon.png"/>
-    <title>Style Practice</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to CSS</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      rel="shortcut icon"
+      href="https://assets-global.website-files.com/64921323294d7b037da1a52c/649c57b41f1d5e313e0ee3b6_Favicon.png"
+    />
+  </head>
+  <body>
     <p>Hey target and change my color!</p>
     <h1>I'm an h1, change my color too!</h1>
 
     <nav>
-        <a href="#a" class="btn">Home</a>
-        <a href="#a" class="btn">News</a>
-        <a href="#a" class="btn">Contact</a>
-        <a href="#a" class="btn" style="text-decoration:underline">About</a>
+      <a href="#a" class="btn">Home</a>
+      <a href="#b" class="btn">News</a>
+      <a href="#c" class="btn">Contact</a>
+      <a href="#d" class="btn">About</a>
+
+      <span>
+        <a href="#e" class="btn">Test link</a>
+      </span>
     </nav>
-    
-</body>
+
+    <div>
+      <h1 class="header">This is my intro to css page!</h1>
+      <p class="header">This is just some text within a paragraph tag</p>
+
+      <h1 id="unique">This is an example of an id</h1>
+    </div>
+
+    <article class="article">
+      <h1>Order of Specificity</h1>
+      <h3 class="oos-class" id="oos-id" style="background-color: yellow">
+        Specificity is !important
+      </h3>
+    </article>
+  </body>
 </html>

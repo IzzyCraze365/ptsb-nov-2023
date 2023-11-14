@@ -1,19 +1,141 @@
-body{
-    background-color: rgb();
+/* 
+
+These comments can span multiple lines
+
+*/
+
+/*
+
+    List of CSS selectors:
+                - Element selector: is going to select all instances of the given tag from our HTML page.
+                    -body
+                    -p
+
+*/
+
+p,
+h1 {
+  /* Select all <p> tags */
+  /* By using a comma, I can have this style effect multiple different tags at the same time */
+
+  /* Property: value ; */
+
+  color: orangered;
+  background-color: rebeccapurple;
 }
 
-p {
-    color: orangered;
-    background-color: rebeccapurple;
-    /* 
+body {
+  background-color: rgb(50, 140, 60);
+
+  /* 
     In CSS we have 3 major ways to refer to a color:
-    -color keywords
-        -green blue rebeccapurple
-    -RBG
 
- */
+        - color keywords:
+                - green, blue, rebeccapurple
+        - RGB Value: 
+            - rgb(0-255,0-255,0-255)
+            - Each one of these numbers represents how strong either the Red, Blue, or Green is in color.
+            - #ffffff (white)
+  */
 }
 
-a{
-    text-decoration: none;
+/* 
+        Classes are accessed with the '.' followed by the class name
+            - Useful for targeting multiple elements        
+*/
+
+.header {
+  color: blue;
+  background-color: pink;
+}
+
+.btn {
+  text-decoration: none;
+  border: 2px solid yellow;
+  background-color: beige;
+  border-radius: 5px;
+}
+
+nav .btn {
+  text-shadow: 1px 1px 5px black;
+}
+
+nav > .btn {
+  background-color: aquamarine;
+}
+
+/* 
+        IDs are accessed with the '#' symbol, followed by the id name.
+            - For targeting a single element
+*/
+#unique {
+  text-decoration: underline overline;
+  background-color: steelblue;
+  color: lightblue;
+  border-radius: 25px;
+}
+
+/* 
+
+    ! CSS Hierarchy 
+
+        This is going to allow CSS to use distinct levels of "priority" to style our elements. The order of priority from weakest to strongest is:
+
+
+            External Stylesheet:
+                - Element
+                - Class
+                - ID
+            
+            Internal Stylesheet:
+                - Element
+                - Class
+                - ID
+                - Inline-Styling
+                - !important
+            
+
+            "External Stylesheet" is a .css file which is not the .html file we our webpage in.
+
+            "Internal Stylesheet" is CSS written within the .html file.
+
+            "Inline-Styling" is when I add a "style" property/attribute to an element in my html file.
+
+
+
+            Order of specificity:
+            1. !important
+            2. In-line style
+            3. id selector
+            4. class
+            5. element
+
+*/
+
+h3 {
+  background-color: red !important;
+}
+
+#oos-id {
+  background-color: white;
+}
+
+.oos-class {
+  background-color: purple;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: pink;
+}
+a:active {
+  color: greenyellow;
+}
+
+a:link {
+  color: #7b7bdc;
+  font-size: 1em;
 }
