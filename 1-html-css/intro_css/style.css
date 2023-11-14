@@ -1,0 +1,19 @@
+body{
+    background-color: rgb();
+}
+
+p {
+    color: orangered;
+    background-color: rebeccapurple;
+    /* 
+    In CSS we have 3 major ways to refer to a color:
+    -color keywords
+        -green blue rebeccapurple
+    -RBG
+
+ */
+}
+
+a{
+    text-decoration: none;
+}
