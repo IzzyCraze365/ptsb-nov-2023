@@ -18,19 +18,20 @@ nav {
   /* Allows us to change the direction of the flex  */
   flex-direction: row;
   /* Aligns flex items to the end */
-  justify-content: end; /* This is the primary direction adjustment */
+  justify-content: end;
   /* Allows us to modify the space between flex items */
   gap: 1em;
-  align-items: center; /* This is the secondary direction adjustment */
+  align-items: center;
   /* Testing out height with the swap of justify, and align items. Row vs column */
+  flex-wrap: wrap;
   height: 5em;
+  width: 100%;
 }
 
 .main-container {
   display: flex;
   margin-top: 3em;
   border: 2px solid black;
-  width: 100vw;
   /* flex-direction: column; */
   /* If we use row we can have a new row appear with flex-wrap, respecting the width and height of it's container */
   flex-wrap: wrap;
@@ -46,6 +47,7 @@ nav {
 .nav-link {
   text-decoration: none;
   color: white;
+  margin-inline: 1em;
 }
 
 .c {

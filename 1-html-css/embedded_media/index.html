@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded Media</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+
+        Purpose: 
+            - Videos can be useful to provide information
+            - Images can help make your site more enjoyable
+            - Maps can help potential customers route to "your" store
+            - Provide more information and engagement
+
+        Types:
+            - Media
+            - Other HTML
+            - Ads
+            - maps, graphs, etc.
+
+     -->
+
+    <!-- Image -->
+    <img
+      src="https://imgs.search.brave.com/CvCz_h9vCKmD2oJ6HfxOPXclrQSLiS_7t-caNAfkAc8/rs:fit:1200:1000:1/g:ce/aHR0cDovL3d3dy5l/bWFnaWRsYS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTMv/MTAvaHRtbDUucG5n"
+      alt="image of html 5"
+      style="height: 200px; width: 300px"
+    />
+    <!-- Common Files 
+            - jpg/jpeg
+                - common
+                - no transparency
+                - raster (pixel) based
+            - png
+                - raster based
+                - support transparency
+            - svg
+                - scalable vector graphic
+                - vector based
+                - scales indefinitely 
+    -->
+    <br />
+
+    <!-- iFrame -->
+    <iframe
+      src="https://www.december.com/html/spec/HTML5-Cheat-Sheet.pdf"
+      title="HTML Cheatsheet"
+      frameborder="0"
+      height="500"
+      width="800"
+      style="border-radius: 20px"
+    >
+    </iframe>
+
+    <!-- 
+        - can take longer to load
+        - used to embed other documents
+        - utilize attributes to detail elements
+        - common to use for videos from dedicated hosts (Youtube, Vimeo)
+
+     -->
+
+    <video width="400" height="200" controls>
+      <source src="#mp4" type="video/mp4" />
+      <source src="#ogg" type="video/ogg" />
+      <source src="#mov" type="video/mov" />
+      Unsupported file type
+    </video>
+    <!-- 
+            - option for locally stored videos
+            - controls
+                - "play", "pause", "volume" options
+            - source
+                - provides possible file formats for the user's browser
+                - checks files from top to bottom
+         -->
+    <br />
+
+    <audio autoplay="false" muted="true" controls>
+      <source src="#audio.mp3" type="audio/mp3" />
+      <source src="#audio.ogg" type="audio/ogg" />
+      <p>Error message here: Unsupported files</p>
+    </audio>
+
+    <!-- 
+        - autoplay
+            - starts audio when the page loads
+            - accepts a boolean (true/false), can be muted on load.
+        - muted
+            - depending on true/false, can be muted on load
+        - loop
+            - repeats the audio after it has loaded
+     -->
+
+    <!-- Maps -->
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-73.2130900,44.4749000,-73.2102500,44.4772200&layer=mapnik"
+      frameborder="0"
+      title="Upright address location"
+      width="400"
+      height="300"
+    >
+    </iframe>
+  </body>
+</html>
