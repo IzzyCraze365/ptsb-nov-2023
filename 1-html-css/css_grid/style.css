@@ -37,7 +37,6 @@ h3 {
       "head head"
       "nav main"
       "footer footer";
-  
     grid-template-rows: 50px 20em 3em;
     grid-template-columns: 0.5fr 4fr;
   }
