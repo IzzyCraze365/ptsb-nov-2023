@@ -1,62 +1,62 @@
 h3 {
-    border: 1px solid purple;
-    background-color: crimson;
-    padding: 0.3em;
-    margin: 0;
-  }
-  
-  .grid_basics {
-    /* By default a grid will be in rows */
-    /* ? Spans across the whole container */
-    /* display: grid; */
-    /* ? Spans to item width */
-    display: inline-grid;
-  }
-  
-  .grid_explicit {
-    display: grid;
-    /* Specifying the row height */
-    /* ? Using pixels */
-    /* grid-template-rows: 150px 120px; */
-    /* Specify the column width */
-    /* grid-template-columns: 90px 90px 90px; */
-  
-    grid-template-columns: 1fr 1fr 3fr;
-    grid-template-rows: 1fr 2fr 4fr;
-    /* Targets both rows & columns */
-    /* gap: 1em; */
-    /* Specify gap of column & row */
-    /* first value targets rows, second value targets columns */
-    gap: 0.4em 1em;
-  }
-  
-  .grid_template {
-    display: grid;
-    width: 100%;
-    grid-template-areas:
-      "head head"
-      "nav main"
-      "footer footer";
-    grid-template-rows: 50px 20em 3em;
-    grid-template-columns: 0.5fr 4fr;
-  }
-  
-  header {
-    background: blue;
-    grid-area: head;
-  }
-  
-  nav {
-    background: green;
-    grid-area: nav;
-  }
-  
-  footer {
-    background: red;
-    grid-area: footer;
-  }
-  
-  main {
-    background: purple;
-    grid-area: main;
-  }
+  border: 1px solid purple;
+  background-color: crimson;
+  padding: 0.3em;
+  margin: 0;
+}
+
+.grid_basics {
+  /* By default a grid will be in rows */
+  /* ? Spans across the whole container */
+  /* display: grid; */
+  /* ? Spans to item width */
+  display: inline-grid;
+}
+
+.grid_explicit {
+  display: grid;
+  /* Specifying the row height */
+  /* ? Using pixels */
+  /* grid-template-rows: 150px 120px; */
+  /* Specify the column width */
+  /* grid-template-columns: 90px 90px 90px; */
+
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: 1fr 2fr 4fr;
+  /* Targets both rows & columns */
+  /* gap: 1em; */
+  /* Specify gap of column & row */
+  /* first value targets rows, second value targets columns */
+  gap: 0.4em 1em;
+}
+
+.grid_template {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "head head"
+    "nav main"
+    "footer footer";
+  grid-template-rows: 50px 20em 3em;
+  grid-template-columns: 0.5fr 4fr;
+}
+
+header {
+  background: blue;
+  grid-area: head;
+}
+
+nav {
+  background: green;
+  grid-area: nav;
+}
+
+footer {
+  background: red;
+  grid-area: footer;
+}
+
+main {
+  background: purple;
+  grid-area: main;
+}

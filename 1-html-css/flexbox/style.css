@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  body {
+    background-color: beige;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav {
+    background-color: rgb(87, 107, 220);
+    display: flex;
+    /* Allows us to change the direction of the flex  */
+    flex-direction: row;
+    /* Aligns flex items to the end */
+    justify-content: end;
+    /* Allows us to modify the space between flex items */
+    gap: 1em;
+    align-items: center;
+    /* Testing out height with the swap of justify, and align items. Row vs column */
+    height: 5em;
+  }
+  
+  .article-preview img {
+    width: 250px;
+    width: 250px;
+  }
