@@ -93,38 +93,38 @@ Your code below
 } */
 
 @media screen and (max-width: 480px) {
-    /* global */
-    p {
-      font-size: 16pt;
-    }
-    /* header  */
-    nav ul {
-      padding: 0;
-    }
-  
-    nav ul li {
-      font-size: x-large;
-    }
-  
-    /* menu */
-  
-    .item-desc {
-      width: 100vw;
-    }
-  
-    .desc {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .desc > p {
-      padding: 1rem 3rem;
-    }
-  
-    /* footer */
-  
-    footer {
-      font-size: x-large;
-      padding-bottom: 1em;
-    }
+  /* global */
+  p {
+    font-size: 16pt;
   }
+  /* header  */
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    font-size: x-large;
+  }
+
+  /* menu */
+
+  .item-desc {
+    width: 100vw;
+  }
+
+  .desc {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desc > p {
+    padding: 1rem 3rem;
+  }
+
+  /* footer */
+
+  footer {
+    font-size: x-large;
+    padding-bottom: 1em;
+  }
+}
