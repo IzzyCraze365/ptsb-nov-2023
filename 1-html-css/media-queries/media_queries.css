@@ -1,0 +1,58 @@
+/* Media Queries */
+
+/* 
+    Common units of measurement:
+        - Percentages : %
+        - Viewport Width : vw
+        - Viewport height : vh
+        - Root element font size: rem
+        - Parent font size: em
+
+    Using Media Queries
+
+        ex:
+            @media screen {  <---- target screens only
+
+                div { <--- element to adjust 
+
+                    background-color: blue;
+
+                }
+
+            }
+
+        AND 
+            @media screen and (min-width: 750px){
+             
+                ***element here***
+
+            }
+
+        OR 
+            @media screen, (min-width: 750px) {
+                ....
+            }
+
+        Build with Mobile first concept!
+
+
+*/
+
+/* @media (max-width: 480px) {
+  body {
+    background-color: darkred;
+  }
+} */
+
+/* 
+* CHALLENGE 1:
+    - If the user is viewing the page in a landscape mode on their phone (galaxy S8+), increase the font size of the nav bar and footer.
+    - Include a bit of spacing within the footer so that the text isn't directly on the bottom of the screen.
+
+* CHALLENGE 2:
+    - Create a media query to accept a screen AND the width of a iPhone SE (375px).
+    - Have the navigational options not display.
+    - Enlarge the Brand so that it is more of a focal point in the header. 
+
+Your code below
+*/
