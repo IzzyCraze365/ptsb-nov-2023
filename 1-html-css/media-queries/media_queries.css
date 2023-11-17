@@ -45,14 +45,86 @@
 } */
 
 /* 
-* CHALLENGE 1:
+ ? CHALLENGE 1:
     - If the user is viewing the page in a landscape mode on their phone (galaxy S8+), increase the font size of the nav bar and footer.
     - Include a bit of spacing within the footer so that the text isn't directly on the bottom of the screen.
 
-* CHALLENGE 2:
+? CHALLENGE 2:
     - Create a media query to accept a screen AND the width of a iPhone SE (375px).
     - Have the navigational options not display.
     - Enlarge the Brand so that it is more of a focal point in the header. 
 
 Your code below
 */
+
+/*
+? Challenge 1 solution
+*/
+
+/* @media screen and (max-width: 740px) and (orientation: landscape) { */
+/* Easy way to test if the m query works, is target something general like the body tag */
+/* body {
+    background: red;
+  } */
+
+/* nav ul li {
+    font-size: 1.3em;
+  }
+
+  footer {
+    padding-bottom: 2.5em;
+    font-size: 1.2em;
+  }
+} */
+
+/*
+? Challenge 2 solution
+*/
+
+/* @media screen and (max-width: 375px) {
+
+  nav ul li {
+    display: none;
+  }
+
+  header {
+    height: 20em;
+  }
+} */
+
+@media screen and (max-width: 480px) {
+    /* global */
+    p {
+      font-size: 16pt;
+    }
+    /* header  */
+    nav ul {
+      padding: 0;
+    }
+  
+    nav ul li {
+      font-size: x-large;
+    }
+  
+    /* menu */
+  
+    .item-desc {
+      width: 100vw;
+    }
+  
+    .desc {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .desc > p {
+      padding: 1rem 3rem;
+    }
+  
+    /* footer */
+  
+    footer {
+      font-size: x-large;
+      padding-bottom: 1em;
+    }
+  }
