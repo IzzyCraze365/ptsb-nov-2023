@@ -23,7 +23,6 @@ console.log("hello world");
 console.log(2 + 2); // Shows the output of 4
 
 /*
-
 JS Data Types:
     Primitives
         * string
@@ -73,7 +72,6 @@ console.log(`My fav number is: ${5 + 5}`);
     - .slice()
     - .toUpperCase()
     - .toLowerCase()
-
 */
 
 console.log("some string".length);
