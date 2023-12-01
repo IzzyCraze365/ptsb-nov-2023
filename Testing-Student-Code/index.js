@@ -7,3 +7,15 @@ console.log("banana".includes("nan"));
 console.log("banana".endsWith("ana"));
 console.log("blueberry".replace("blue", "black"));
 
+// With Booleans //
+let myBool = ("pie" + true);
+console.log(myBool);
+
+myBool = ("pie" + false);
+console.log(myBool);
+
+let myBool2 = false + 8;
+console.log(myBool2)
+
+myBool2 = true + 8;
+console.log(myBool2)
