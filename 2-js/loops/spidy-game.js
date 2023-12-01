@@ -1,27 +1,3 @@
-/*
-?   While loop structure
-
-    while (expression) {
-        ...code to run if expression is true
-    }
-
-
-    - The main purpose for while loops are when iteration is uncertain
-    - Ex) If we wanted to guess a spade from a randomized amount of cards, we can use a while loop to continuously go through until the condition is met
-*/
-
-let numArr = [1, 5, 35, -23, 0, 3, 10, 4.34];
-let index = 0;
-let sum = 0;
-
-while (index < numArr.length) {
-  // console.log(numArr[index]);
-  numArr[index] > 0 && (sum += numArr[index]);
-  index++;
-}
-
-// console.log(`The sum of all the positive integers is: ${sum}`);
-
 let city = [
   "building",
   "sign",
@@ -66,15 +42,15 @@ let badGuys = [
 ];
 
 /*
-?   Do while
-
-    do {
-      ...code block
-    } while (expression)
-
-    - works just like a while loop with the exception that it will run our code block at least once.
-
-*/
+  ?   Do while
+  
+      do {
+        ...code block
+      } while (expression)
+  
+      - works just like a while loop with the exception that it will run our code block at least once.
+  
+  */
 
 let random = Math.floor(Math.random() * badGuys.length);
 // console.log(random);
