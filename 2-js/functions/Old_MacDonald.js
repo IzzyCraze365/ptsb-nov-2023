@@ -1,6 +1,7 @@
 // Traditional Function
 function singOldMacDonald(animal, sound) {
-    console.log(`Old MacDonald had a farm,
+  console.log(`
+  Old MacDonald had a farm,
       Ee i ee i o!
   And on his farm he had some ${animal}s,
       Ee i ee i oh!
@@ -9,20 +10,21 @@ function singOldMacDonald(animal, sound) {
   Here a ${sound}, there a ${sound},
       Everywhere a ${sound}-${sound}.
   Old MacDonald had a farm,
-      Ee i ee i o!!!
-  `);
-  }
-  
-  singOldMacDonald("pig", "oink");
-  singOldMacDonald("cow", "moo");
-  singOldMacDonald("horse", "neigh");
-  singOldMacDonald("cat", "meow");
-  singOldMacDonald("dog", "woof");
-  singOldMacDonald("trebuchet", "swing");
-  
+      Ee i ee i o!!!`);
+    }
+
+console.log("THIS IS THE TRADITIONAL FUNCTION");
+singOldMacDonald("pig", "oink");
+singOldMacDonald("cow", "moo");
+singOldMacDonald("horse", "neigh");
+singOldMacDonald("cat", "meow");
+singOldMacDonald("dog", "woof");
+singOldMacDonald("trebuchet", "swing");
+
 // Arrow Function
- let singOldMacDonald2 = (animal, sound) => { 
- console.log(`Old MacDonald had a farm,
+let sing_E_I_E_I_O = (animal, sound) => {
+  console.log(`
+Old MacDonald had a farm,
     Ee i ee i o!
 And on his farm he had some ${animal}s,
     Ee i ee i oh!
@@ -31,12 +33,13 @@ With a ${sound}-${sound} here,
 Here a ${sound}, there a ${sound},
     Everywhere a ${sound}-${sound}.
 Old MacDonald had a farm,
-    Ee i ee i o!!!
-  `)}
+    Ee i ee i o!!!`);
+};
 
-  singOldMacDonald2("pig", "oink");
-  singOldMacDonald2("cow", "moo");
-  singOldMacDonald2("horse", "neigh");
-  singOldMacDonald2("cat", "meow");
-  singOldMacDonald2("dog", "woof");
-  singOldMacDonald2("trebuchet", "swing");
+console.log("THIS IS THE ARROW FUNCTION");
+sing_E_I_E_I_O("pig", "oink");
+sing_E_I_E_I_O("cow", "moo");
+sing_E_I_E_I_O("horse", "neigh");
+sing_E_I_E_I_O("cat", "meow");
+sing_E_I_E_I_O("dog", "woof");
+sing_E_I_E_I_O("trebuchet", "swing");
