@@ -58,12 +58,12 @@ function singOldMacDonald(animal, sound) {
     }
 
 console.log("THIS IS THE TRADITIONAL FUNCTION");
-singOldMacDonald("pig", "oink");
-singOldMacDonald("cow", "moo");
-singOldMacDonald("horse", "neigh");
-singOldMacDonald("cat", "meow");
-singOldMacDonald("dog", "woof");
-singOldMacDonald("trebuchet", "swing");
+oldMacDonaldSingAlong("buffalo","quack");
+oldMacDonaldSingAlong("rooster","cockadoodledoo")
+oldMacDonaldSingAlong("dog","woof")
+oldMacDonaldSingAlong("cat","meow")
+oldMacDonaldSingAlong("pig","oink")
+oldMacDonaldSingAlong("catapult","swing")
 
 // Arrow Function
 let sing_E_I_E_I_O = (animal, sound) => {
