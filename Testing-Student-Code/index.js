@@ -1,7 +1,4 @@
 
-
-
-
 let currentLight = "Red";
 trafficLight(currentLight);
 
