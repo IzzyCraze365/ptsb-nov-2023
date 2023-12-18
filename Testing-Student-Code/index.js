@@ -1,4 +1,6 @@
 /* 
+
+//! This is a really Good Example of if / else if / else statements
 let currentLight = "Red";
 trafficLight(currentLight);
 
@@ -25,6 +27,8 @@ function trafficLight(light) {
 let treat = "Potatoes"
 console.log(snackTime(treat));
  */
+
+
 const readline = require('readline');
 const rl = readline.createInterface(process.stdin, process.stdout);
 
