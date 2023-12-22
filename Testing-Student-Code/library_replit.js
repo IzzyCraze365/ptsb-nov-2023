@@ -26,19 +26,27 @@ let library = [
     },
   ];
   
-  function search(tag) {
-    let result = library.tags[].filter((someBook)) {
-      if (someBook.includes(tag)) {
-      console.log(result)
-    } else {
-      return false
-    }
-  })
+
+function search(tag){
+let searchedMovie = library.filter((movie) => movie.tags[0] === tag);
+/* console.log(library);
+console.log(library[0].tags[1]);
+console.log(library.tags[0]); */
+return searchedMovie
+}
+
   
-  }
+  console.log("Search Fantasy",search("fantasy"));
+  console.log("Search sci-fi",search("sci-fi"));
+  console.log("Search nonfiction",search("nonfiction"));
+  console.log("Search technology",search("technology"));
   
-  console.log(search("fantasy"));
-  console.log(search("sci-fi"));
-  console.log(search("nonfiction"));
-  console.log(search("technology"));
-  
+
+
+  function search2(tag){
+   let searchedMovie = library.filter(
+    function(somebook)
+    {if(somebook.tags.includes(tag)){
+      return somebook
+    }} )
+      return somebook};
