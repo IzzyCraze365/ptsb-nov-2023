@@ -5,8 +5,8 @@
     // - This object will have 3 main keys:
         // - id, movies, and shows.
     // - id will simply be an integer.
-    - movies will be an array of objects that represent individual movies. - DONE
-        These objects will have:
+    // - movies will be an array of objects that represent individual movies. - DONE
+        // These objects will have:
                 // - title will be a string
                 // - genre will be an array of strings
                 // - rating will be a string
@@ -37,60 +37,60 @@
 */
 
 let hulu = {
-    id: 1,
-    movies: [
-      {
-        title: "The Dark Knight",
-        genre: ["action", "adventure"],
-        rating: "PG-13",
-        runtime: 60,
-        year: 2008,
-      },
-      {
-        title: "SomeotherMovie",
-        genre: ["horror", "action"],
-        rating: "R",
-        runtime: 60,
-        year: 2008,
-      },
-    ],
-    show: [
-      {
-        title: "SomeShow",
-        numberOfSeasons: 5,
-        seasons: [
-          {
-            season: 1,
-            numOfepisodes: 2,
-            episodes: [
-              {
-                title: "episode1",
-                air: "2020",
-              },
-              {
-                title: "episode2",
-                air: "2021",
-              },
-            ],
-          },
-          {
-            season: 2,
-            numOfepisodes: 3,
-            episodes: [
-              {
-                title: "episode1ofotherseason",
-                air: "2023",
-              },
-              {
-                title: "episode2",
-                air: "2023",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  };
-  
-  console.log(hulu.show[0].title);
-  console.log(hulu.show[0].seasons[1].episodes[0].title);
+  id: 1,
+  movies: [
+    {
+      title: "The Dark Knight",
+      genre: ["action", "adventure"],
+      rating: "PG-13",
+      runtime: 60,
+      year: 2008,
+    },
+    {
+      title: "SomeotherMovie",
+      genre: ["horror", "action"],
+      rating: "R",
+      runtime: 60,
+      year: 2008,
+    },
+  ],
+  show: [
+    {
+      title: "SomeShow",
+      numberOfSeasons: 5,
+      seasons: [
+        {
+          season: 1,
+          numOfepisodes: 2,
+          episodes: [
+            {
+              title: "episode1",
+              air: "2020",
+            },
+            {
+              title: "episode2",
+              air: "2021",
+            },
+          ],
+        },
+        {
+          season: 2,
+          numOfepisodes: 3,
+          episodes: [
+            {
+              title: "episode1ofotherseason",
+              air: "2023",
+            },
+            {
+              title: "episode2",
+              air: "2023",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+console.log(hulu.show[0].title);
+console.log(hulu.show[0].seasons[1].episodes[0].title);
