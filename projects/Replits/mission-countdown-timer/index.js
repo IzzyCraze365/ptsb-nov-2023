@@ -14,10 +14,10 @@ function startCountdown() {
 
 function startIntervalCount() {
   console.log("Start Countdown Button Clicked");
-  
-  setInterval(countdown, 1000);
-    console.log("Test");
- /*  if (countDown === 0) {
+  let count = 5;
+  setInterval(countdown, 1000, count);
+  console.log("Test");
+  /*  if (countDown === 0) {
       intervalDisplay.textContent = "BLASTOFF!!!";
       clearInterval(countDown)
   } else if (countDown > 0) {
@@ -28,12 +28,19 @@ function startIntervalCount() {
 }
 
 function countdown(number) {
-    
-    console.log("COUNTDOWN FUNC", number)
+  console.log("COUNTDOWN FUNC", number);
+  if (number > 0) {
     intervalDisplay.textContent = number;
-    number--
-    count = number;
-/*     if (number === 0) {
+    number--;
+    console.log("Number",number)
+  } else {
+    intervalDisplay.textContent = "BLASTOFF!!!";
+  }
+  count = number;
+  console.log("Number",number)
+  console.log("Count",count)
+  return count;
+  /*     if (number === 0) {
         intervalDisplay.textContent = "BLASTOFF!!!";
         clearInterval(countDown)
     } else if (number > 0) {
@@ -44,7 +51,6 @@ function countdown(number) {
       intervalDisplay.textContent = "Launch Failed";
     } */
 }
-
 
 /* function countdown(number) {
     for (count = 5; count >= 0; count--) {
