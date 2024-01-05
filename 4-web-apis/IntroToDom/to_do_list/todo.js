@@ -1,5 +1,3 @@
-/* Created by Amit */
-
 let toDosArray = [
   {
     name: "Laundry",
