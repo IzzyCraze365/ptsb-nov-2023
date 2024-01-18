@@ -13,4 +13,15 @@ router.get("/", (req, res) => {
   }
 });
 
+router.get("/param/:id", (req, res) => {
+  try {
+    let { id } = req.params;
+    let results = db.filter((obj) => obj.id == res.send(results));
+  } catch (err) {
+    res.status(500).json({
+      Error: err,
+    });
+  }
+});
+
 module.exports = router;
