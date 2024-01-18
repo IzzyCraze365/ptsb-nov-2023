@@ -7,6 +7,5 @@ let getAllButton = document.getElementById("get-all");
 form.addEventListener("submit", (eventObject) => {
   eventObject.preventDefault();
   try {
-    let searchParam = form.search;
   } catch (err) {}
 });
