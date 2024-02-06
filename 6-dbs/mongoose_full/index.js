@@ -1,8 +1,43 @@
+//? Importing dotenv, and applying it (giving us access to process)
+require("dotenv").config();
+
 //? Importing Express
 const express = require("express");
 
+//? Importing Cors
+const cors = require("cors");
+
+//? Importing Mongoose
+const mongoose = require("mongoose");
+
+const MONGODB = process.env.MONGO_DB_URL + process.env.DB_NAME;
+
 //? Assign Express
 const app = express();
+
+//? Connection middleware.  connecting to DB
+mongoose.connect(MONGODB);
+
+//? Storing the connection status
+const db = mongoose.connection;
+// get seed data
+//make model
+const ProductModel = mongoose.model(
+  `product`,
+  new mongoose.Schema({
+    emoji: String,
+    name: String,
+    quantity: Number,
+    price: Number,
+    tags: Array,
+  })
+);
+
+db.once("open", async () => {
+  console.log("*".repeat(10));
+  console.log(`Connected successfully to database:\n ${MONGODB}`);
+  console.log("*".repeat(10));
+});
 
 //? Assigning a variable from .env, with fallback port of 8080
 //* || - OR/DEFAULT operator
@@ -27,3 +62,5 @@ app.listen(PORT, () => {
     console.log("Error connecting", err);
   }
 });
+
+// get request for
