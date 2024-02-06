@@ -1,4 +1,4 @@
-//? Importing dotenv, and applying it (giving us access to process)
+//? Importing dotenv, and applying it (giving us access to process.env)
 require("dotenv").config();
 
 //? Importing Express
@@ -10,20 +10,25 @@ const cors = require("cors");
 //? Importing Mongoose
 const mongoose = require("mongoose");
 
+//? Connection string URL variable from .env file
 const MONGODB = process.env.MONGO_DB_URL + process.env.DB_NAME;
 
 //? Assign Express
 const app = express();
 
-//? Connection middleware.  connecting to DB
+//? Import controller/s
+const { userController } = require("./controllers/index");
+
+//? Connection middleware, connecting to DB
 mongoose.connect(MONGODB);
 
 //? Storing the connection status
 const db = mongoose.connection;
 // get seed data
-//make model
+// make model
+
 const ProductModel = mongoose.model(
-  `product`,
+  "product",
   new mongoose.Schema({
     emoji: String,
     name: String,
@@ -35,7 +40,7 @@ const ProductModel = mongoose.model(
 
 db.once("open", async () => {
   console.log("*".repeat(10));
-  console.log(`Connected successfully to database:\n ${MONGODB}`);
+  console.log(`Connected successfully to database:\n${MONGODB}`);
   console.log("*".repeat(10));
 });
 
@@ -52,6 +57,9 @@ app.use(express.urlencoded({ extended: true }));
 //? Allow our endpoints to be interacted with via web browser
 app.use(cors());
 
+//? Using the controllers
+app.use("/user", userController);
+
 //? Initial spin up of the Express server
 app.listen(PORT, () => {
   try {
@@ -63,4 +71,4 @@ app.listen(PORT, () => {
   }
 });
 
-// get request for
+// get request for the model
