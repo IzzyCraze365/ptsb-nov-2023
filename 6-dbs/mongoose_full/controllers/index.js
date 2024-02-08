@@ -1,3 +1,6 @@
+//? Import controllers
 const userController = require("./user_controller");
+const postController = require("./post_controller");
 
-module.exports = { userController };
+//? Export controllers
+module.exports = { userController, postController };
