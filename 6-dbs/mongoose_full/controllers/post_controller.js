@@ -1,82 +1,43 @@
-const router = require("express").Router();
+//? Importing jwt to verify/decode the payload
+const jwt = require("jsonwebtoken");
 
-const Post = require("../models/post_model");
+//? Importing user model so we can search for their _id after it has been decoded
+const User = require("../models/user_model");
 
-//? Using params to grab user id and add it to a post
-// router.post("/create/:id", async (req, res) => {
-//   try {
-//     let post = new Post({
-//       text: req.body.text,
-//       user_id: req.params.id,
-//     });
-
-//     const newPost = await post.save();
-
-//     res.status(200).json({
-//       Created: newPost,
-//     });
-//   } catch (err) {
-//     res.status(500).json({
-//       Error: err,
-//     });
-//   }
-// });
-
-router.get("/mine", async (req, res) => {
+//? Middleware still has access to the request, response, and requires the next() function to move passed it
+const validateSession = async (req, res, next) => {
   try {
-    let results = await Post.find({ user_id: req.user._id }).select({
-      _id: 1,
-      text: 1,
-      createdAt: 1,
-      updatedAt: 1,
-    });
+    //? Take token provided by the request object (headers.authorization)
+    const auth = req.headers.authorization;
+    // console.log(auth);
 
-    res.status(200).json({
-      Results: results,
-    });
+    //? Checking if authorization header is present and value, if not, throw an error
+    if (!auth) throw new Error("Unauthorized");
+
+    //? Separate the token from the string
+    const token = auth.split(" ")[1];
+
+    //? Checking if token present. ex.) is there a token after the "Bearer" portion of the string
+    if (!token) throw new Error("Unauthorized");
+
+    //? Decode the token - Should be decoded payload (obj with user id on it)
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    // console.log(decoded);
+
+    //? Find user in our db
+    const user = await User.findById(decoded.id);
+
+    //? Check if user exists in db
+    if (!user) throw new Error("User not found");
+
+    //? Add the found user to the request object
+    req.user = user;
+
+    //? Move forward and continue completing the request
+    return next();
   } catch (err) {
-    res.status(500).json({
-      Error: err,
-    });
+    res.status(401).json({ Error: err.message });
   }
-});
-router.post("/create", async (req, res) => {
-  try {
-    let post = new Post({
-      text: req.body.text,
-      user_id: req.user._id,
-    });
+};
 
-    const newPost = await post.save();
-
-    res.status(200).json({
-      Created: newPost,
-    });
-  } catch (err) {
-    res.status(500).json({
-      Error: err,
-    });
-  }
-});
-
-router.get("/all", async (req, res) => {
-  try {
-    let results = await Post.find()
-      .populate("user_id", ["firstName", "lastName", "-_id"])
-      .select({
-        text: 1,
-        createdAt: 1,
-        updatedAt: 1,
-      });
-
-    res.status(200).json({
-      Results: results,
-    });
-  } catch (err) {
-    res.status(500).json({
-      Error: err,
-    });
-  }
-});
-
-module.exports = router;
+module.exports = validateSession;
