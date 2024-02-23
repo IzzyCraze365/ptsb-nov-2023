@@ -216,3 +216,17 @@ ex:
 ```jsx
 navigate("/sample-endpoint");
 ```
+
+# React + Vite
+
+- More modern way to spin up a server.
+  
+ex:
+
+```jsx
+npm create vite@latest "folderName"
+
+  cd "folderName"
+  npm install
+  npm run dev
+```
